@@ -7,11 +7,11 @@ const TOOTH = "M315.204,32.786c-42.129-49.124-113.851-10.811-124.018-4.996C158.5
 
 var container;
 
-Template.diagram.onCreated(function helloOnCreated() {
+Template.diagram.onCreated(function diagramOnCreated() {
     this.subscribe('teeth');
 });
 
-Template.diagram.onRendered(function renderTeeth(){
+Template.diagram.onRendered(function diagramOnRendered(){
   this.autorun(() => {
     if (this.subscriptionsReady()){
       renderSvg();
